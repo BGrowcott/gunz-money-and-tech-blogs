@@ -1,2 +1,3 @@
 # gunz-money-and-tech-blogs
-Tech blog site
+
+Tech Blog and wot?
