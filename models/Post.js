@@ -22,6 +22,10 @@ Post.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
+  code: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   date_created: {
     type: DataTypes.DATE,
     allowNull: false,

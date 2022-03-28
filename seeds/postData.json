@@ -3,6 +3,7 @@
       "title": "Best loop?",
       "category": "JavaScript",
       "content": "What is the best loop for looping through arrays and why?",
+      "code": "for (let i = 0; i < array.length; i++)",
       "user_id": 1
     }
 ]

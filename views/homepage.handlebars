@@ -1,1 +1,24 @@
-<h2>Yo fools, this is a test!</h2>
+<h2>Posts</h2>
+<section>
+  {{#each posts as |post|}}
+    <div class='post-card'>
+      <header>
+        <h3>{{post.title}}</h3>
+      </header>
+      <div class='card-body'>
+        <p>{{post.content}}</p>
+        <pre><code>{{post.code}}</code></pre>
+      </div>
+      <footer>
+        <div>
+          <button>View Replies</button>
+          <button>Reply</button>
+        </div>
+        <div class='sign-off'>
+          <p>{{format_date post.date_created}}</p>
+          <p class='op'>~{{post.user.name}}</p>
+        </div>
+      </footer>
+    </div>
+  {{/each}}
+</section>
