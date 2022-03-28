@@ -1,0 +1,44 @@
+/* Header styles - visible on all pages */
+header {
+    background-color: rgb(243, 243, 243);
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgb(204, 204, 204);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px ;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-right:  40px;
+}
+
+button {
+    background-color: rgb(160, 255, 129);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid rgb(133, 133, 133);
+    transition: 0.2s;
+}
+
+button:hover{
+    background-color: rgb(21, 36, 16);
+    color: whitesmoke;
+}
+
+button:active {
+    background-color: rgb(107, 255, 58);
+    box-shadow: 0px 0px 5px inset rgb(188, 255, 166);
+}
+
