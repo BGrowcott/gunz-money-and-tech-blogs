@@ -14,10 +14,6 @@ Post.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
-  category: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
   content: {
     type: DataTypes.STRING,
     allowNull: false,

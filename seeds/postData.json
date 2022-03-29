@@ -1,9 +1,13 @@
 [
     {
       "title": "Best loop?",
-      "category": "JavaScript",
       "content": "What is the best loop for looping through arrays and why?",
       "code": "for (let i = 0; i < array.length; i++)",
       "user_id": 1
+    },
+    {
+      "title": "Handlebars problems",
+      "content": "Why doesn't the #each helper work if it's on the first line?",
+      "user_id": 2
     }
 ]

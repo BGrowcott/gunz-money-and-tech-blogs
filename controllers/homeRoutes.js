@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { Post, User } = require('../models');
+const { Post, User, Comments } = require('../models');
 
 
 // homepage
@@ -13,9 +13,17 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        {
+          model: Comments,
+          include: [{model: User}],
+        },
       ],
+      order: [
+        ["id", "ASC"],
+        [Comments, "id", 'ASC']
+      ]
     });
-    
+
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
     console.log(posts)

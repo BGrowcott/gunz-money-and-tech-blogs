@@ -7,18 +7,40 @@
       </header>
       <div class='card-body'>
         <p>{{post.content}}</p>
-        <pre><code>{{post.code}}</code></pre>
+        {{#if post.code}}
+          <pre><code>{{post.code}}</code></pre>
+        {{/if}}
       </div>
       <footer>
         <div>
-          <button>View Replies</button>
-          <button>Reply</button>
+          <button class='replies-button'>View
+            {{post.comments.length}}
+            Replies</button>
+          <button class='hide-replies'>Hide Replies</button>
+          <button class="reply">Reply</button>
         </div>
         <div class='sign-off'>
           <p>{{format_date post.date_created}}</p>
           <p class='op'>~{{post.user.name}}</p>
         </div>
       </footer>
+      <div class='comment-container'>
+        {{#each post.comments as |comment|}}
+          <div class='comment'>
+            <p class='comment-content'>{{comment.content}}</p>
+            <p class='comment-sign-off'>~{{comment.user.name}}</p>
+          </div>
+        {{/each}}
+      </div>
+      <div class='reply-container'>
+        <textarea id="{{post.id}}" cols='30' rows='5'></textarea>
+        <div class='controls'>
+          <button class="submit-reply">Submit</button>
+          <button class="cancel-reply">Cancel</button>
+        </div>
+      </div>
     </div>
   {{/each}}
 </section>
+
+<script src='./js/homepage.js'></script>

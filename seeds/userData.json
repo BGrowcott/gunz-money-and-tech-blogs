@@ -3,5 +3,10 @@
         "name": "Ben G",
         "email": "bg@fakemail.com",
         "password": "password123"
+    },
+    {
+        "name": "Angelina Jolie",
+        "email": "aj@fakemail.com",
+        "password": "password123"
     }
 ]
