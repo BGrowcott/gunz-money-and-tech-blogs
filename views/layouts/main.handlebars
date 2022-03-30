@@ -5,6 +5,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script
       src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
       integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
@@ -18,7 +21,11 @@
       <nav>
         <ul>
           <li><a href='/'>Home</a></li>
-          <li>Dashboard</li>
+          {{#if logged_in}}
+          <li><a href="/dashboard">Dashboard</a></li>
+          {{else}}
+          <li><a href="/login">Dashboard</a></li>
+          {{/if}}
         </ul>
         <div id="loginout">
           {{#if logged_in}}
@@ -35,7 +42,7 @@
       {{{body}}}
     </main>
 
-    <footer>Nice footer things here</footer>
+    <footer id="page-footer">Made with &#10084;&#65039; by Ben G</footer>
   </body>
 
   {{#if logged_in}}

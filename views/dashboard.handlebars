@@ -1,6 +1,10 @@
-<h1>All Posts</h1>
+<h1>Hi {{name}}!</h1>
+<div id="new-post-container">
+    <h2>Your posts:</h2>
+    <button id="new-post">New Post +</button>
+</div>
 <section>
-  {{#each posts as |post|}}
+{{#each posts as |post|}}
     <div class='post-card'>
       <header>
         <h3>{{post.title}}</h3>
@@ -24,7 +28,8 @@
           {{/if}}
         </div>
         <div class='sign-off'>
-          <p class='op'>{{format_date post.date_created}} ~{{post.user.name}}</p>
+          <p>{{format_date post.date_created}}</p>
+          <p class='op'>~{{post.user.name}}</p>
         </div>
       </footer>
       <div class='comment-container'>
@@ -43,7 +48,7 @@
         </div>
       </div>
     </div>
-  {{/each}}
+{{/each}}
 </section>
 
 <script src='./js/homepage.js'></script>

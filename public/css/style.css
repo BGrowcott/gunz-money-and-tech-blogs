@@ -1,8 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
 /* Header styles - visible on all pages */
 #pageHead {
     background-color: rgb(243, 243, 243);
     padding: 5px;
     box-shadow: 0px 0px 5px rgb(204, 204, 204);
+    margin-bottom: 10px;
 }
 
 #pageHead nav {
@@ -52,6 +56,9 @@ button:active {
     margin: 0px 10px;
 }
 
+h1, h2 {
+    margin-left: 1%;
+}
 /* Post styles */
 
 section {
@@ -86,12 +93,17 @@ section {
     margin: 5px 0px;
 }
 
+.post-card pre {
+    margin: 20px 0px;
+}
+
 .post-card div code {
-    background-color: rgb(34, 33, 33);
+    background-color: rgb(190, 190, 190);
+    box-shadow: 0px 0px 5px black inset;
     font-family: monospace;
-    color: whitesmoke;
-    padding: 10px;
-    border-radius: 10px;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
 }
 
 .sign-off {
@@ -188,4 +200,23 @@ section {
 .form-button {
     align-self: center;
     margin-top: 10px;
+}
+
+/* dash board styles */
+
+#new-post-container{
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+/* footer */
+
+#page-footer{
+    text-align: center;
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
