@@ -3,6 +3,27 @@
     <h2>Your posts:</h2>
     <button id="new-post">New Post +</button>
 </div>
+
+<div id="form-container">
+  <form id="new-post-form">
+    <div class='input-label'>
+      <label for="title">Title:</label>
+      <input type="text" id="title">
+    </div>
+    <div class='input-label'>
+      <label for="content">Content:</label>
+      <textarea id="content" cols="30" rows="5"></textarea>
+    </div>
+    <div class='input-label'>
+      <label for="code">Code (optional):</label>
+      <textarea id="code" cols="30" rows="5"></textarea>
+    </div>
+    <div class='controls'>
+      <button class="submit-post">Submit</button>
+      <button class="cancel-post">Cancel</button>
+    </div>
+  </form>
+</div>
 <section>
 {{#each posts as |post|}}
     <div class='post-card'>
@@ -28,8 +49,8 @@
           {{/if}}
         </div>
         <div class='sign-off'>
-          <p>{{format_date post.date_created}}</p>
-          <p class='op'>~{{post.user.name}}</p>
+          <p class="op">{{format_date post.date_created}}</p>
+          <button data-id="{{post.id}}" class="delete-post">Delete</button>
         </div>
       </footer>
       <div class='comment-container'>
@@ -43,7 +64,7 @@
       <div class='reply-container'>
         <textarea id="{{post.id}}" cols='30' rows='5'></textarea>
         <div class='controls'>
-          <button class="submit-reply">Submit</button>
+          <button data-id="{{post.id}}" class="submit-reply">Submit</button>
           <button class="cancel-reply">Cancel</button>
         </div>
       </div>
@@ -52,3 +73,4 @@
 </section>
 
 <script src='./js/homepage.js'></script>
+<script src='./js/dashboard.js'></script>

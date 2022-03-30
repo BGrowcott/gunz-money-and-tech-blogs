@@ -15,11 +15,11 @@ Post.init({
     allowNull: false,
   },
   content: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(1234),
     allowNull: false,
   },
   code: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(1234),
     allowNull: true,
   },
   date_created: {

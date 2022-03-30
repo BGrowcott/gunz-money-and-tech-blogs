@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
         },
       ],
       order: [
-        ["id", "ASC"],
+        ["id", "DESC"],
         [Comments, "id", 'ASC']
       ]
     });
@@ -63,7 +63,7 @@ router.get('/login', (req, res) => {
     try {
       // Get all posts and JOIN with user data
       const postData = await Post.findAll({
-        where: user_id = req.session.user_id,
+        where: {user_id: req.session.user_id},
         include: [
           {
             model: User,
@@ -75,7 +75,7 @@ router.get('/login', (req, res) => {
           },
         ],
         order: [
-          ["id", "ASC"],
+          ["id", "DESC"],
           [Comments, "id", 'ASC']
         ]
       });
