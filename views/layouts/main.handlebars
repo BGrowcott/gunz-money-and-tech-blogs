@@ -5,18 +5,28 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/style.css' />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+      integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
+      crossorigin='anonymous'
+      referrerpolicy='no-referrer'
+    ></script>
     <title>Document</title>
   </head>
   <body>
-    <header id="pageHead">
+    <header id='pageHead'>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href='/'>Home</a></li>
           <li>Dashboard</li>
         </ul>
-        <div>
-          <a href='/login'><button>Log in/Sign up</button></a>
+        <div id="loginout">
+          {{#if logged_in}}
+            <p>Welcome back, {{name}}</p>
+            <button id="logout-button">Log out</button>
+          {{else}}
+            <a href='/login'><button>Log in/Sign up</button></a>
+          {{/if}}
         </div>
       </nav>
     </header>
@@ -27,5 +37,9 @@
 
     <footer>Nice footer things here</footer>
   </body>
+
+  {{#if logged_in}}
+    <script src='/js/logout.js'></script>
+  {{/if}}
 
 </html>

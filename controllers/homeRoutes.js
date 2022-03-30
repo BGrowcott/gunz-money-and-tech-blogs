@@ -28,9 +28,11 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
     console.log(posts)
     // Pass serialized data and session flag into template
+    console.log(req.session)
     res.render('homepage', { 
-      posts
-      // logged_in: req.session.logged_in 
+      posts,
+      logged_in: req.session.logged_in, 
+      name: req.session.name
     });
   } catch (err) {
     res.status(500).json(err);
@@ -42,10 +44,10 @@ router.get('/', async (req, res) => {
 //login
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
-    // if (req.session.logged_in) {
-    //   res.redirect('/profile');
-    //   return;
-    // }
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
   
     res.render('login');
   });

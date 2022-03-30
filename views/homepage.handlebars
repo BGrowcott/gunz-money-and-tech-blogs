@@ -17,7 +17,11 @@
             {{post.comments.length}}
             Replies</button>
           <button class='hide-replies'>Hide Replies</button>
+          {{#if ../logged_in}}
           <button class="reply">Reply</button>
+          {{else}}
+          <a href="/login"><button>Reply</button></a>
+          {{/if}}
         </div>
         <div class='sign-off'>
           <p>{{format_date post.date_created}}</p>
