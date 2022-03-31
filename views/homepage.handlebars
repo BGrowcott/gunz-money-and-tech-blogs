@@ -1,4 +1,6 @@
-<h1>All Posts</h1>
+<h1><img class="title-images" src="./images/guns.png" alt="guns image"> GUNZ, MONEY 'N' TECH BLOGZ <img class="title-images" src="./images/guns.png" alt="guns image"></h1>
+<h2>Deez Posts be Illin':</h2>
+<hr>
 <section>
   {{#each posts as |post|}}
     <div class='post-card'>
@@ -31,14 +33,21 @@
         {{#each post.comments as |comment|}}
           <div class='comment'>
             <p class='comment-content'>{{comment.content}}</p>
-            <p class='comment-sign-off'>~{{comment.user.name}}</p>
+            {{#if (eq ../../userId comment.user_id) }}
+            <div class="your-comment">
+            <p class='comment-sign-off'>{{format_date comment.date_created}} ~You</p>
+            <button data-id="{{comment.id}}" class="delete-comment">Delete</button>
+            </div>
+            {{else}}
+            <p class='comment-sign-off'>{{format_date comment.date_created}} ~{{comment.user.name}}</p>
+            {{/if}}
           </div>
         {{/each}}
       </div>
       <div class='reply-container'>
-        <textarea id="{{post.id}}" cols='30' rows='5'></textarea>
+        <textarea  cols='30' rows='5'></textarea>
         <div class='controls'>
-          <button class="submit-reply">Submit</button>
+          <button data-id="{{post.id}}" class="submit-reply">Submit</button>
           <button class="cancel-reply">Cancel</button>
         </div>
       </div>
@@ -47,3 +56,4 @@
 </section>
 
 <script src='./js/homepage.js'></script>
+<script src="./js/comments.js"></script>

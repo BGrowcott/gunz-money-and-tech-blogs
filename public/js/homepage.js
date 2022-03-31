@@ -38,5 +38,3 @@ function cancelReply(e) {
       .parent()
       .css('display', 'none');
 }
-
-// submit a reply
