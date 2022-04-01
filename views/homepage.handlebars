@@ -1,4 +1,4 @@
-<h1><img class="title-images" src="./images/guns.png" alt="guns image"> GUNZ, MONEY 'N' TECH BLOGZ <img class="title-images" src="./images/guns.png" alt="guns image"></h1>
+<h1><img class="title-images" src="./images/guns.png" alt="guns image"> GUNZ, MONEY 'N' TECH BLOG$ <img class="title-images" src="./images/guns.png" alt="guns image"></h1>
 <h2>Deez Posts be Illin':</h2>
 <hr>
 <section>
@@ -6,6 +6,9 @@
     <div class='post-card'>
       <header>
         <h3>{{post.title}}</h3>
+        <div class='sign-off'>
+          <p class='op'>{{format_date post.date_created}} ~{{post.user.name}}</p>
+        </div>
       </header>
       <div class='card-body'>
         <p>{{post.content}}</p>
@@ -24,9 +27,6 @@
           {{else}}
           <a href="/login"><button>Reply</button></a>
           {{/if}}
-        </div>
-        <div class='sign-off'>
-          <p class='op'>{{format_date post.date_created}} ~{{post.user.name}}</p>
         </div>
       </footer>
       <div class='comment-container'>

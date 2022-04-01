@@ -1,9 +1,9 @@
 <h1>Yes Yes, {{name}}!</h1>
 <div id="new-post-container">
-    <h2>Your posts:</h2>
+    <h2>Your Tingz:</h2>
     <button id="new-post">New Post +</button>
 </div>
-
+<hr>
 <div id="form-container">
   <form id="new-post-form">
     <div class='input-label'>
@@ -29,6 +29,9 @@
     <div class='post-card'>
       <header>
         <h3>{{post.title}}</h3>
+        <div class='sign-off'>
+          <p class='op'>{{format_date post.date_created}} ~{{post.user.name}}</p>
+        </div>
       </header>
       <div class='card-body'>
         <p>{{post.content}}</p>
@@ -49,7 +52,6 @@
           {{/if}}
         </div>
         <div class='sign-off'>
-          <p class="op">{{format_date post.date_created}}</p>
           <button data-id="{{post.id}}" class="delete-post">Delete</button>
         </div>
       </footer>
