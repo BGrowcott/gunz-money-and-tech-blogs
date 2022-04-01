@@ -1,4 +1,8 @@
-<h1><img class="title-images" src="./images/guns.png" alt="guns image"> GUNZ, MONEY 'N' TECH BLOG$ <img class="title-images" src="./images/guns.png" alt="guns image"></h1>
+<div id="title-container">
+<img class="title-images" src="./images/guns.png" alt="guns image">
+<h1>GUNZ, MONEY 'N' TECH BLOG$</h1>
+<img class="title-images" src="./images/guns.png" alt="guns image">
+</div>
 <h2>Deez Posts be Illin':</h2>
 <hr>
 <section>
@@ -35,11 +39,11 @@
             <p class='comment-content'>{{comment.content}}</p>
             {{#if (eq ../../userId comment.user_id) }}
             <div class="your-comment">
-            <p class='comment-sign-off'>{{format_date comment.date_created}} ~You</p>
+            <p class='comment-sign-off op'>{{format_date comment.date_created}} ~You</p>
             <button data-id="{{comment.id}}" class="delete-comment">Delete</button>
             </div>
             {{else}}
-            <p class='comment-sign-off'>{{format_date comment.date_created}} ~{{comment.user.name}}</p>
+            <p class='comment-sign-off op'>{{format_date comment.date_created}} ~{{comment.user.name}}</p>
             {{/if}}
           </div>
         {{/each}}

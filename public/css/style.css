@@ -79,8 +79,15 @@ button:active {
 
 h1,
 h2 {
-  margin: 30px 0px 20px 1%;
+  margin: 30px 1% 20px 1%;
 }
+
+#title-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 /* Post styles */
 
 section {
@@ -113,6 +120,7 @@ section {
   padding: 20px 10px;
   border-radius: 5px;
   margin: 5px 0px;
+  box-shadow: inset 0px 0px 5px rgb(100, 100, 100);
 }
 
 .post-card pre {
@@ -138,6 +146,7 @@ section {
 .op {
   color: rgb(95, 95, 95);
   font-style: oblique;
+  font-size: small;
 }
 
 .comment-container {
@@ -223,6 +232,12 @@ section {
   margin: 5px;
 }
 
+input, textarea {
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 5px rgb(100, 100, 100);
+}
+
 .form-title {
   text-align: center;
   font-size: 25px;
@@ -260,6 +275,11 @@ section {
   background-color: rgb(235, 125, 147);
 }
 
+.update-post {
+  background-color: rgb(159, 241, 241);
+  margin-right: 5px;
+}
+
 /* footer */
 
 #page-footer {
@@ -267,4 +287,53 @@ section {
   background-color: whitesmoke;
   width: 100%;
   margin-top: 50px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 700px) {
+  .post-card {
+    width: 100%;
+  }
+
+  section {
+    margin-right: 1%;
+  }
+
+  #forms-container {
+    flex-direction: column;
+  }
+
+  .signup-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    #pageHead nav{
+      display: flex;
+      flex-direction: column;
+    }
+
+    #pageHead nav ul {
+      flex-direction: column;
+      padding: 0px;
+      text-align: center;
+    }
+
+    #pageHead nav ul li{
+      margin: 0px
+    }
+
+    code {
+      font-size: smaller;
+    }
+
+    .input-label, #loginout {
+      flex-direction: column;
+    }
+
+    main {
+      padding-top: 100px;
+    }
 }
