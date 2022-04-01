@@ -27,11 +27,11 @@ Tech blog website where a user can create, view and update posts regarding tech.
 
 ### Screenshot
 
-[Deployed Application](public/images/screencapture-gunz-money-and-tech-blogs-herokuapp-dashboard-2022-04-01-22_54_52.png)
+![Deployed Application](public/images/screencapture-gunz-money-and-tech-blogs-herokuapp-dashboard-2022-04-01-22_54_52.png)
 
 ### Deployed Application
 
-![Gunz, Money and Tech Blogs](https://gunz-money-and-tech-blogs.herokuapp.com/)
+[Gunz, Money and Tech Blogs](https://gunz-money-and-tech-blogs.herokuapp.com/)
 ## Technology Stack
 
 - JavaScript
