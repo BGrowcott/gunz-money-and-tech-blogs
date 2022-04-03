@@ -22,9 +22,7 @@ async function sendComment(e) {
 }
 
 // delete comment
-
 $('.delete-comment').click(deleteComment)
-
 async function deleteComment (e) {
     if (e.target.hasAttribute('data-id')) {
       const id = e.target.getAttribute('data-id');

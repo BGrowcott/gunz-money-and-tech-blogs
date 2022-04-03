@@ -1,5 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-image: url('../images/backgroundblackfade.png');
+  background-size: cover;
 }
 
 main {
@@ -16,12 +18,13 @@ h1 {
 }
 
 #pageHead {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(0, 0, 0);
   padding: 5px;
   box-shadow: 0px 0px 5px rgb(204, 204, 204);
   margin-bottom: 10px;
   position: fixed;
   width: 100%;
+  color: white;
 }
 
 #pageHead nav {
@@ -44,6 +47,7 @@ h1 {
 
 #pageHead nav a {
   font-family: 'Alfa Slab One';
+  color: aqua;
 }
 
 button {
@@ -75,6 +79,15 @@ button:active {
 #loginout p {
   margin: 0px 10px;
   font-family: 'Alfa Slab One';
+}
+
+#logout-button{
+  background-color: yellow;
+  transition: all 0.5s;
+}
+
+#logout-button:hover{
+  background-color: rgb(255, 255, 153);
 }
 
 h1,
@@ -161,6 +174,8 @@ section {
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
+  box-shadow: inset 0px 0px 5px rgb(100, 100, 100);
+
 }
 
 .comment:nth-child(odd) {
@@ -205,6 +220,8 @@ section {
 /* Styles for log in/sign up page */
 
 #forms-container {
+  margin: auto;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -214,7 +231,7 @@ section {
 .signup-form {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 48%;
   box-shadow: 0px 0px 10px rgb(199, 199, 199);
   padding: 5px;
   border-radius: 10px;
@@ -237,6 +254,11 @@ input, textarea {
   border: 2px solid black;
   border-radius: 5px;
   box-shadow: inset 0px 0px 5px rgb(100, 100, 100);
+  transition: all 0.5s;
+}
+
+input:focus {
+  background-color: rgb(146, 255, 255);
 }
 
 .form-title {
@@ -288,6 +310,7 @@ input, textarea {
   background-color: whitesmoke;
   width: 100%;
   margin-top: 50px;
+  box-shadow: 0px 0px 10px grey;
 }
 
 /* media queries */
@@ -302,7 +325,7 @@ input, textarea {
   }
 
   #forms-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .signup-form {

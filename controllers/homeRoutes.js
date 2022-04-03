@@ -78,7 +78,7 @@ router.get('/login', (req, res) => {
           [Comments, "id", 'ASC']
         ]
       });
-  
+      
       // Serialize data so the template can read it
       const posts = postData.map((post) => post.get({ plain: true }));
       // Pass serialized data and session flag into template

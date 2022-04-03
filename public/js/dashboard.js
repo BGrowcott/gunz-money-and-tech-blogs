@@ -9,6 +9,9 @@ $('.cancel-post').click(cancelPost);
 function cancelPost(e) {
   e.preventDefault();
   updatePost = false
+  $('#title').val('')
+  $('#content').val('')
+  $('#code').val('')
   $('#form-container').css('display', 'none');
 }
 
