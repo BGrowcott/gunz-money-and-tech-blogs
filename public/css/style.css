@@ -138,6 +138,7 @@ section {
 }
 
 .post-card pre {
+  overflow: auto;
   margin: 20px 0px;
   background-color: rgb(216, 216, 216);
   box-shadow: 0px 0px 5px black inset;
