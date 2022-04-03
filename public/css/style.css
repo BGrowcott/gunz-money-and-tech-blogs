@@ -130,6 +130,8 @@ section {
 }
 
 .card-body {
+  max-height: 300px;
+  overflow: auto;
   background-color: white;
   padding: 20px 10px;
   border-radius: 5px;
@@ -202,6 +204,10 @@ section {
 .your-comment button {
   background-color: rgb(235, 125, 147);
   margin-right: 5px;
+}
+
+.your-comment button:hover {
+  background-color: red;
 }
 
 .hide-replies {
@@ -303,6 +309,10 @@ input:focus {
 
 .delete-post {
   background-color: rgb(235, 125, 147);
+}
+
+.delete-post:hover {
+  background-color: red;
 }
 
 .update-post {
