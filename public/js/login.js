@@ -23,6 +23,7 @@ async function logIn(e) {
 }
 
 // sign up
+const signUpMessage = $('#signup-message')
 $('#signup-button').click(signUp);
 async function signUp(event) {
   event.preventDefault();
@@ -33,14 +34,16 @@ async function signUp(event) {
   const confirmPassword = $('#confirm-password').val();
 
   if (password.length < 8) {
-    $('#signup-message').text(
+    signUpMessage.css('display', 'initial')
+    signUpMessage.text(
       'Please use a password at least 8 characters long.'
     );
     return;
   }
 
   if (password !== confirmPassword) {
-    $('#signup-message').text('Passwords do not match, try again!');
+    signUpMessage.css('display', 'initial')
+    signUpMessage.text('Passwords do not match, try again!');
     return;
   }
 
@@ -52,7 +55,7 @@ async function signUp(event) {
     });
 
     if (response.ok) {
-      $('#signup-message').text('Success!');
+      signUpMessage.text('Success!');
       setTimeout(() => document.location.replace('/dashboard'), 200);
     } else {
       alert(response.statusText);
